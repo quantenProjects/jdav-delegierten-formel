@@ -1,0 +1,18 @@
+[package]
+name = "jdav-calc"
+version = "0.1.0"
+publish = false
+edition = "2021"
+
+[dependencies]
+color-eyre = "0.5"
+csv = "1.1.6"
+serde = { version = "1", features = ["derive"] }
+tracing = "0.1.32"
+tracing-subscriber = "0.3.9"
+
+[package.metadata.nix]
+build = true
+app = true
+[package.metadata.nix.env]
+RUST_LOG = "debug"
